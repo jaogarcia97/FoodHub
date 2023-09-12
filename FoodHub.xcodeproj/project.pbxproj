@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D002DA582AB0853E00163D30 /* AddTransactionML.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002DA572AB0853E00163D30 /* AddTransactionML.swift */; };
+		D002DA5B2AB0935700163D30 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002DA5A2AB0935700163D30 /* TestView.swift */; };
+		D002DA602AB0B0B900163D30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002DA5F2AB0B0B900163D30 /* User.swift */; };
 		D00FB5BD2AAC4DA100509E39 /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FB5BC2AAC4DA100509E39 /* TransactionHistoryView.swift */; };
 		D00FB5BF2AAC4FC500509E39 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FB5BE2AAC4FC500509E39 /* TransactionRowView.swift */; };
 		D00FB5C22AAC50FF00509E39 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00FB5C12AAC50FF00509E39 /* TransactionItem.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D002DA572AB0853E00163D30 /* AddTransactionML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionML.swift; sourceTree = "<group>"; };
+		D002DA5A2AB0935700163D30 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		D002DA5F2AB0B0B900163D30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D00FB5BC2AAC4DA100509E39 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
 		D00FB5BE2AAC4FC500509E39 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
 		D00FB5C12AAC50FF00509E39 /* TransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
@@ -87,10 +93,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D002DA562AB0852100163D30 /* AddTransactionML */ = {
+			isa = PBXGroup;
+			children = (
+				D002DA572AB0853E00163D30 /* AddTransactionML.swift */,
+			);
+			path = AddTransactionML;
+			sourceTree = "<group>";
+		};
 		D00FB5C02AAC50DF00509E39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D00FB5C12AAC50FF00509E39 /* TransactionItem.swift */,
+				D002DA5F2AB0B0B900163D30 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +156,7 @@
 			children = (
 				D0158D532AAF4D9400989A4F /* TransactionHistory */,
 				D0158D522AAF4D7E00989A4F /* AddTransaction */,
+				D002DA562AB0852100163D30 /* AddTransactionML */,
 				D0158D562AAF51BC00989A4F /* SalesAccount */,
 			);
 			path = "Sales Associate";
@@ -180,12 +196,13 @@
 				D0D2DB4F2A90785100E07E0D /* FoodHubApp.swift */,
 				D0D2DB512A90785100E07E0D /* LoginView.swift */,
 				D0158D5B2AAF76FF00989A4F /* Helpers */,
-				D00FB5C02AAC50DF00509E39 /* Model */,
 				D06BFD482AA8F6F900CD3613 /* Login */,
 				D06BFD4A2AA8F85F00CD3613 /* MainTabBar */,
 				D06BFD492AA8F84300CD3613 /* Sales Associate */,
+				D00FB5C02AAC50DF00509E39 /* Model */,
 				D0D2DB532A90785200E07E0D /* Assets.xcassets */,
 				D0D2DB552A90785200E07E0D /* Preview Content */,
+				D002DA5A2AB0935700163D30 /* TestView.swift */,
 			);
 			path = FoodHub;
 			sourceTree = "<group>";
@@ -345,6 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D002DA602AB0B0B900163D30 /* User.swift in Sources */,
+				D002DA5B2AB0935700163D30 /* TestView.swift in Sources */,
 				D0D2DB522A90785100E07E0D /* LoginView.swift in Sources */,
 				D00FB5C22AAC50FF00509E39 /* TransactionItem.swift in Sources */,
 				D0158D5A2AAF525F00989A4F /* SalesAccountView.swift in Sources */,
@@ -355,6 +374,7 @@
 				D00FB5BD2AAC4DA100509E39 /* TransactionHistoryView.swift in Sources */,
 				D0D2DB502A90785100E07E0D /* FoodHubApp.swift in Sources */,
 				D0158D5D2AAF772800989A4F /* CircleImage.swift in Sources */,
+				D002DA582AB0853E00163D30 /* AddTransactionML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

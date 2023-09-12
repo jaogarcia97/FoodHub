@@ -55,7 +55,7 @@ struct TransactionHistoryView: View {
                 }
                 Divider()
                 //DATE PICKER
-                DatePicker("Select a Date", selection: $selectedDate, displayedComponents: .date)
+                DatePicker("Select a Date: ", selection: $selectedDate, displayedComponents: .date)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 3)
                 Divider()

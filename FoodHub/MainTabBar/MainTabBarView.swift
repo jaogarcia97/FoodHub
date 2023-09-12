@@ -28,9 +28,16 @@ struct MainTabBarView: View {
             
             AddTransactionView()
                 .tabItem {
-                    Label("Add Transactions", systemImage: "plus")
+                    Label("Add Manually", systemImage: "plus")
                 }
                 .tag(Tab.addTransaction)
+            
+            AddTransactionML()
+                .tabItem {
+                    Label("Scan Item", systemImage: "camera.metering.center.weighted.average")
+                }
+                .tag(Tab.addTransaction)
+            
             SalesAccountView()
                 .tabItem {
                     Label("Account", systemImage: "person.crop.circle")
@@ -39,6 +46,16 @@ struct MainTabBarView: View {
             
             
         }
+        .onAppear {
+                        // correct the transparency bug for Tab bars
+                        let tabBarAppearance = UITabBarAppearance()
+                        tabBarAppearance.configureWithOpaqueBackground()
+                        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+                        // correct the transparency bug for Navigation bars
+                        let navigationBarAppearance = UINavigationBarAppearance()
+                        navigationBarAppearance.configureWithOpaqueBackground()
+                        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                    }
     }
 }
 

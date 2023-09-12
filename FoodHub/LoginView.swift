@@ -12,6 +12,9 @@ struct LoginView: View {
     @State private var password: String = ""
     
     var body: some View {
+        NavigationView{
+            
+        
         ZStack { // Use ZStack to cover the entire screen
             Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 1))
             
@@ -34,29 +37,36 @@ struct LoginView: View {
                         
                         Spacer().frame(height: 40)
                         
-                        Button(action: {
-                            // You can add your login logic here
-                            // For now, let's just print the entered credentials
-                            print("Username: \(username)")
-                            print("Password: \(password)")
-                        }) {
-                            Text("Login")
-                                                .foregroundColor(.white)
-                                                .padding(.vertical, 10)
-                                                .padding(.horizontal, 40)
-                                                .background(
-                                                    LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]),
-                                                                   startPoint: .leading,
-                                                                   endPoint: .trailing)
-                                                )
-                                                .cornerRadius(20)
-                        }
+                        //MARK: - Login
                         
+                            NavigationLink {
+                                MainTabBarView ()
+                                    .navigationBarBackButtonHidden(true)
+                            } label: {
+                                ZStack{
+                                    Text("Login")
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 40)
+                                        .background(
+                                            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]),
+                                                           startPoint: .leading,
+                                                           endPoint: .trailing)
+                                        )
+                                        .cornerRadius(20)
+                                }
+                               
+                            }
+                        
+                        
+                        
+
                         Spacer().frame(height: 20)
                         
                         
+                        //MARK: - Forgot Password
                         Button {
-                            //
+                            
                         } label: {
                             Text("Forgot password?")
                                 .font(.subheadline)
@@ -92,6 +102,7 @@ struct LoginView: View {
                     .padding()
                 }
                 .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
