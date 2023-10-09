@@ -16,13 +16,15 @@ struct TransactionHistoryView: View {
 
     var body: some View {
         
-        NavigationView{
+        
             VStack {
+                Spacer().frame(height: 20)
                 Divider()
                 //TOTAL CASH:
                 HStack{
                     Text("Total Cash in Registry: ")
                         .padding(.horizontal, 20)
+                        .font(Font.body.bold())
                     Spacer()
                     Button {
                         showTotalCash.toggle()
@@ -55,7 +57,7 @@ struct TransactionHistoryView: View {
                 }
                 Divider()
                 //DATE PICKER
-                DatePicker("Select a Date", selection: $selectedDate, displayedComponents: .date)
+                DatePicker("Select a Date: ", selection: $selectedDate, displayedComponents: .date)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 3)
                 Divider()
@@ -74,7 +76,7 @@ struct TransactionHistoryView: View {
                 }
             }
             .navigationTitle("Transaction History")
-        }
+        
         
     }
 }
