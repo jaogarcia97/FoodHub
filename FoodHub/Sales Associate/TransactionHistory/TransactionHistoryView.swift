@@ -16,13 +16,15 @@ struct TransactionHistoryView: View {
 
     var body: some View {
         
-        NavigationView{
+        
             VStack {
+                Spacer().frame(height: 20)
                 Divider()
                 //TOTAL CASH:
                 HStack{
                     Text("Total Cash in Registry: ")
                         .padding(.horizontal, 20)
+                        .font(Font.body.bold())
                     Spacer()
                     Button {
                         showTotalCash.toggle()
@@ -74,7 +76,7 @@ struct TransactionHistoryView: View {
                 }
             }
             .navigationTitle("Transaction History")
-        }
+        
         
     }
 }

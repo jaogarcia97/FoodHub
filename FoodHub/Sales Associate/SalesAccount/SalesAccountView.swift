@@ -19,11 +19,8 @@ struct SalesAccountView: View {
     var body: some View {
         
         VStack {
-            NavigationView{
-                
+            
                 Form {
-                    
-                    
                     HStack{
                         Text(User.MOCK_USER.initials)
                             .font(.title)
@@ -76,7 +73,7 @@ struct SalesAccountView: View {
                     }
                 }
                 
-            }
+            
 
         }
     }
