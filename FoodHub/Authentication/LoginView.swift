@@ -45,8 +45,8 @@ struct LoginView: View {
                             
                             //MARK: - Login
                                 NavigationLink {
-                                    //MainTabBarView ()
-                                    //    .navigationBarBackButtonHidden(true)
+                                    MainTabBarView ()
+                                        .navigationBarBackButtonHidden()
                                 } label: {
                                     ZStack{
                                         Text("Login")

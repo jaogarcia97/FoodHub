@@ -17,35 +17,39 @@ struct MainTabBarView: View {
         case account
     }
     
-    
     var body: some View {
-        TabView(selection: $selection){
-            TransactionHistoryView(viewModel: TransactionHistoryViewModel())
-                .tabItem {
-                    Label("Transactions", systemImage: "list.bullet.rectangle")
-                }
-                .tag(Tab.transactionHistory)
-            
-            AddTransactionView()
-                .tabItem {
-                    Label("Add Manually", systemImage: "plus")
-                }
-                .tag(Tab.addTransaction)
-            
-            AddTransactionML()
-                .tabItem {
-                    Label("Scan Item", systemImage: "camera.metering.center.weighted.average")
-                }
-                .tag(Tab.addTransaction)
-            
-            SalesAccountView()
-                .tabItem {
-                    Label("Account", systemImage: "person.crop.circle")
-                }
-                .tag(Tab.account)
-            
-            
+        
+        NavigationView {
+            TabView(selection: $selection){
+                TransactionHistoryView(viewModel: TransactionHistoryViewModel())
+                    .tabItem {
+                        Label("Transactions", systemImage: "list.bullet.rectangle")
+                    }
+                    .tag(Tab.transactionHistory)
+                
+                AddTransactionView()
+                    .tabItem {
+                        Label("Add Manually", systemImage: "plus")
+                    }
+                    .tag(Tab.addTransaction)
+                
+                AddTransactionML()
+                    .tabItem {
+                        Label("Scan Item", systemImage: "camera.metering.center.weighted.average")
+                    }
+                    .tag(Tab.addTransaction)
+                
+                SalesAccountView()
+                    .tabItem {
+                        Label("Account", systemImage: "person.crop.circle")
+                    }
+                    .tag(Tab.account)
+                
+                
+            }
         }
+        .navigationViewStyle(StackNavigationViewStyle()) //For ipad display
+        //Background Color of the Main Bar
         .onAppear {
                         // correct the transparency bug for Tab bars
                         let tabBarAppearance = UITabBarAppearance()
@@ -56,6 +60,8 @@ struct MainTabBarView: View {
                         navigationBarAppearance.configureWithOpaqueBackground()
                         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
                     }
+         
+         
     }
 }
 

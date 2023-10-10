@@ -13,69 +13,44 @@ struct TransactionHistoryView: View {
     
     @State private var selectedDate = Date()
     @State private var showTotalCash = false
-
+    
     var body: some View {
         
-        
-            VStack {
-                Spacer().frame(height: 20)
-                Divider()
-                //TOTAL CASH:
-                HStack{
-                    Text("Total Cash in Registry: ")
-                        .padding(.horizontal, 20)
-                        .font(Font.body.bold())
-                    Spacer()
-                    Button {
-                        showTotalCash.toggle()
-                    } label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 8)
-                                .foregroundColor(.gray)
-                                .opacity(0.2)
-                                .frame(width: 200, height: 35)
-                            
-                            if showTotalCash == false {
-                                HStack{
-                                    Image(systemName: "eye.slash")
-                                        .foregroundColor(.black)
-                                }
-                                
-                            } else {
-                                HStack{
-                                    Text("₱ 30,000.00")
-                                        .font(.system(size: 25))
-                                        .foregroundColor(.black)
-                                    Image(systemName: "eye")
-                                        .foregroundColor(.black)
-                                }
-                                
+        VStack {
+            
+            //MARK: - CASH DRAWER
+            CashDrawerView()
+                .padding(10)
+            
+            //MARK: - TRANSACTION HISTORY
+            ScrollView {
+                    VStack {
+                        Spacer().frame(height: 20)
+                        Divider()
+                        
+                        ScrollView {
+                            ForEach(0..<20, id: \.self) { transaction in
+                                TransactionRowView(transactionItem: viewModel.sampleTransactionItem)
+                                    .padding(10)
                             }
+                            
                         }
                     }
-                    .padding(.horizontal, 20)
-                }
-                Divider()
-                //DATE PICKER
-                DatePicker("Select a Date: ", selection: $selectedDate, displayedComponents: .date)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 3)
-                Divider()
-                
-                VStack{
-                    Text("Branch:Tarlac FoodHub")
-                        .fontWeight(.bold)
-                    Text("Registry: Pasalubong Store")
-                }
-                //TRANSACTIONS
-                List {
-                        ForEach(0..<20, id: \.self) { _ in
-                            TransactionRowView(transactionItem: viewModel.sampleTransactionItem)
+                }//End of Scroll View
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        HStack {
+                            Image(systemName: "person.circle.fill")
+                            Text("Magsino, Candy")
+                                //.font(.title)
+                                .fontWeight(.semibold)
+                                .font(.system(size: 18))
                         }
+                        
+                    }
                     
-                }
             }
-            .navigationTitle("Transaction History")
+        }
         
         
     }
