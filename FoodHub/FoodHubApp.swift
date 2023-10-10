@@ -11,6 +11,7 @@ import SwiftUI
 struct FoodHubApp: App {
     var body: some Scene {
         WindowGroup {
+            //Root View Setup
             LoginView()
         }
     }
