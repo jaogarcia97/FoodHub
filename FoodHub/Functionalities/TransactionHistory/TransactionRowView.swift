@@ -37,6 +37,7 @@ struct TransactionRowView: View {
             //Product Price
             Text(String(format: "₱ %.2f", transactionItem.productPrice))
         }
+        
     }
     
     
