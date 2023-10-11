@@ -14,6 +14,7 @@ struct MainTabBarView: View {
     enum Tab {
         case transactionHistory
         case addTransaction
+        case addCategory
         case account
     }
     
@@ -29,9 +30,15 @@ struct MainTabBarView: View {
                 
                 AddTransactionView()
                     .tabItem {
-                        Label("Add Manually", systemImage: "plus")
+                        Label("Add Order", systemImage: "plus")
                     }
                     .tag(Tab.addTransaction)
+                
+                AddCategoryView()
+                    .tabItem {
+                        Label("Add Category", systemImage: "plus.square")
+                    }
+                    .tag(Tab.addCategory)
                 
                 AddTransactionML()
                     .tabItem {
