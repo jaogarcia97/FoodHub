@@ -14,6 +14,7 @@ struct MainTabBarView: View {
     enum Tab {
         case transactionHistory
         case addTransaction
+        case addItem
         case addCategory
         case account
     }
@@ -34,11 +35,19 @@ struct MainTabBarView: View {
                     }
                     .tag(Tab.addTransaction)
                 
+                AddItemView()
+                    .tabItem {
+                        Label("Add Item", systemImage: "plus.square")
+                    }
+                    .tag(Tab.addItem)
+                
+                /*
                 AddCategoryView()
                     .tabItem {
                         Label("Add Category", systemImage: "plus.square")
                     }
                     .tag(Tab.addCategory)
+                 */
                 
                 AddTransactionML()
                     .tabItem {
@@ -51,8 +60,6 @@ struct MainTabBarView: View {
                         Label("Account", systemImage: "person.crop.circle")
                     }
                     .tag(Tab.account)
-                
-                
             }
         }
         .navigationViewStyle(StackNavigationViewStyle()) //For ipad display

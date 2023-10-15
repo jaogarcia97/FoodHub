@@ -17,6 +17,7 @@
 		D0158D552AAF4DF700989A4F /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0158D542AAF4DF700989A4F /* AddTransactionView.swift */; };
 		D0158D5A2AAF525F00989A4F /* SalesAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0158D592AAF525F00989A4F /* SalesAccountView.swift */; };
 		D0158D5D2AAF772800989A4F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0158D5C2AAF772800989A4F /* CircleImage.swift */; };
+		D02D9A172ADB91B800DF28EE /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D9A162ADB91B800DF28EE /* AddItemView.swift */; };
 		D042BC9A2AD55621006F8E74 /* CashDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042BC992AD55621006F8E74 /* CashDrawerView.swift */; };
 		D06BFD4C2AA8F95800CD3613 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BFD4B2AA8F95800CD3613 /* MainTabBarView.swift */; };
 		D092E7032AD156320057D4A0 /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092E7022AD156320057D4A0 /* AddTransactionViewModel.swift */; };
@@ -30,6 +31,10 @@
 		D0D6C5382AD6456800B199C2 /* CalculatorPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C5372AD6456800B199C2 /* CalculatorPadView.swift */; };
 		D0D6C53A2AD6481F00B199C2 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C5392AD6481F00B199C2 /* SearchBarView.swift */; };
 		D0D6C53D2AD662C100B199C2 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C53C2AD662C100B199C2 /* AddCategoryView.swift */; };
+		D0D6C5402AD66C2000B199C2 /* CategoriesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C53F2AD66C2000B199C2 /* CategoriesGridView.swift */; };
+		D0D6C5422AD6771F00B199C2 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C5412AD6771F00B199C2 /* ProductsListView.swift */; };
+		D0D6C5442AD677AD00B199C2 /* ProductCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C5432AD677AD00B199C2 /* ProductCellRow.swift */; };
+		D0D6C5482AD680FA00B199C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6C5472AD680FA00B199C2 /* Extensions.swift */; };
 		D0ED49D62AD414D4008BE96C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED49D52AD414D4008BE96C /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +66,7 @@
 		D0158D542AAF4DF700989A4F /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		D0158D592AAF525F00989A4F /* SalesAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesAccountView.swift; sourceTree = "<group>"; };
 		D0158D5C2AAF772800989A4F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		D02D9A162ADB91B800DF28EE /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		D042BC992AD55621006F8E74 /* CashDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashDrawerView.swift; sourceTree = "<group>"; };
 		D06BFD4B2AA8F95800CD3613 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		D092E7022AD156320057D4A0 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +83,10 @@
 		D0D6C5372AD6456800B199C2 /* CalculatorPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPadView.swift; sourceTree = "<group>"; };
 		D0D6C5392AD6481F00B199C2 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D0D6C53C2AD662C100B199C2 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		D0D6C53F2AD66C2000B199C2 /* CategoriesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesGridView.swift; sourceTree = "<group>"; };
+		D0D6C5412AD6771F00B199C2 /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
+		D0D6C5432AD677AD00B199C2 /* ProductCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellRow.swift; sourceTree = "<group>"; };
+		D0D6C5472AD680FA00B199C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0ED49D52AD414D4008BE96C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,11 +170,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D02D9A152ADB900600DF28EE /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				D02D9A162ADB91B800DF28EE /* AddItemView.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
 		D06BFD492AA8F84300CD3613 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
 				D0158D532AAF4D9400989A4F /* TransactionHistory */,
 				D0158D522AAF4D7E00989A4F /* AddTransaction */,
+				D02D9A152ADB900600DF28EE /* AddItem */,
 				D0D6C53B2AD6629C00B199C2 /* AddCategory */,
 				D002DA562AB0852100163D30 /* AddTransactionML */,
 				D0158D562AAF51BC00989A4F /* SalesAccount */,
@@ -204,11 +223,13 @@
 			isa = PBXGroup;
 			children = (
 				D0D2DB4F2A90785100E07E0D /* FoodHubApp.swift */,
+				D0D6C53E2AD66BCB00B199C2 /* Items */,
+				D00FB5C02AAC50DF00509E39 /* Model */,
 				D0ED49D42AD414C2008BE96C /* Authentication */,
-				D0158D5B2AAF76FF00989A4F /* Helpers */,
 				D06BFD4A2AA8F85F00CD3613 /* MainTabBar */,
 				D06BFD492AA8F84300CD3613 /* Functionalities */,
-				D00FB5C02AAC50DF00509E39 /* Model */,
+				D0158D5B2AAF76FF00989A4F /* Helpers */,
+				D0D6C5462AD680D500B199C2 /* Utils */,
 				D0D2DB532A90785200E07E0D /* Assets.xcassets */,
 				D0D2DB552A90785200E07E0D /* Preview Content */,
 				D002DA5A2AB0935700163D30 /* TestView.swift */,
@@ -263,6 +284,24 @@
 				D0D6C53C2AD662C100B199C2 /* AddCategoryView.swift */,
 			);
 			path = AddCategory;
+			sourceTree = "<group>";
+		};
+		D0D6C53E2AD66BCB00B199C2 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				D0D6C53F2AD66C2000B199C2 /* CategoriesGridView.swift */,
+				D0D6C5412AD6771F00B199C2 /* ProductsListView.swift */,
+				D0D6C5432AD677AD00B199C2 /* ProductCellRow.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		D0D6C5462AD680D500B199C2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0D6C5472AD680FA00B199C2 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D0ED49D42AD414C2008BE96C /* Authentication */ = {
@@ -404,14 +443,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D6C5482AD680FA00B199C2 /* Extensions.swift in Sources */,
 				D002DA602AB0B0B900163D30 /* User.swift in Sources */,
+				D0D6C5442AD677AD00B199C2 /* ProductCellRow.swift in Sources */,
 				D002DA5B2AB0935700163D30 /* TestView.swift in Sources */,
 				D0D2DB522A90785100E07E0D /* LoginView.swift in Sources */,
 				D00FB5C22AAC50FF00509E39 /* TransactionItem.swift in Sources */,
 				D0158D5A2AAF525F00989A4F /* SalesAccountView.swift in Sources */,
+				D02D9A172ADB91B800DF28EE /* AddItemView.swift in Sources */,
+				D0D6C5422AD6771F00B199C2 /* ProductsListView.swift in Sources */,
 				D0D6C53D2AD662C100B199C2 /* AddCategoryView.swift in Sources */,
 				D0158D512AAF450600989A4F /* TransactionHistoryViewModel.swift in Sources */,
 				D06BFD4C2AA8F95800CD3613 /* MainTabBarView.swift in Sources */,
+				D0D6C5402AD66C2000B199C2 /* CategoriesGridView.swift in Sources */,
 				D00FB5BF2AAC4FC500509E39 /* TransactionRowView.swift in Sources */,
 				D0158D552AAF4DF700989A4F /* AddTransactionView.swift in Sources */,
 				D0ED49D62AD414D4008BE96C /* RegistrationView.swift in Sources */,

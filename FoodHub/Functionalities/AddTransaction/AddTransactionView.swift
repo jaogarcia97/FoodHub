@@ -9,12 +9,22 @@ import SwiftUI
 
 
 struct AddTransactionView: View {
+    
     @State var searchtext: String = ""
+    @State var inSearchMode: Bool = false
     var body: some View {
         ScrollView{
-            SearchBarView(text: $searchtext)
+            SearchBarView(text: $searchtext, isEdting: $inSearchMode )
+                .padding(10)
+            
+            
+            //ProductsListView()
+            if inSearchMode {
+                ProductsListView()
+            } else {
+                CategoriesGridView()
+            }
         }
-        
     }
     
 }
