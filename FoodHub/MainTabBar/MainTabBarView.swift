@@ -11,6 +11,10 @@ struct MainTabBarView: View {
     
     @State private var selection: Tab = .transactionHistory
     
+    //Tab Sheets:
+    @State private var showAddCategoryView: Bool = false
+    @State private var showEditItem: Bool = false
+    
     enum Tab {
         case transactionHistory
         case addTransaction
@@ -42,11 +46,11 @@ struct MainTabBarView: View {
                     .tag(Tab.addItem)
                 
                 /*
-                AddCategoryView()
-                    .tabItem {
-                        Label("Add Category", systemImage: "plus.square")
-                    }
-                    .tag(Tab.addCategory)
+                 AddCategoryView()
+                 .tabItem {
+                 Label("Add Category", systemImage: "plus.square")
+                 }
+                 .tag(Tab.addCategory)
                  */
                 
                 AddTransactionML()
@@ -65,17 +69,57 @@ struct MainTabBarView: View {
         .navigationViewStyle(StackNavigationViewStyle()) //For ipad display
         //Background Color of the Main Bar
         .onAppear {
-                        // correct the transparency bug for Tab bars
-                        let tabBarAppearance = UITabBarAppearance()
-                        tabBarAppearance.configureWithOpaqueBackground()
-                        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-                        // correct the transparency bug for Navigation bars
-                        let navigationBarAppearance = UINavigationBarAppearance()
-                        navigationBarAppearance.configureWithOpaqueBackground()
-                        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+            // correct the transparency bug for Tab bars
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            // correct the transparency bug for Navigation bars
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        }
+        .toolbar {
+            ToolbarItemGroup (placement: .navigationBarLeading) {
+                HStack {
+                    Image(systemName: "person.circle.fill")
+                    Text("Magsino, Candy")
+                    //.font(.title)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 18))
+                    
+                    //Spacer()
+                }
+                
+            } //End of ToolBar Item Group
+        }
+        .toolbar {
+            //Trail Here
+            if selection == .addItem {
+                
+                
+                HStack {
+                    Button("Edit") {
+                        showEditItem.toggle()
                     }
-         
-         
+                    .sheet(isPresented: $showEditItem) {
+                        Text("SHOW EDIT ITEM VIEW")
+                    }
+                    
+                    Button("Add Category") {
+                        showAddCategoryView.toggle()
+                    }
+                    .sheet(isPresented: $showAddCategoryView) {
+                        AddCategoryView()
+                    }
+                }
+                
+            } else if selection == .account {
+                Button ("Edit Account & Stores"){
+                    print("Edit Account")
+                }
+            }
+        }
+        
     }
 }
 
