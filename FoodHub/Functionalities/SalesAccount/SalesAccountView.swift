@@ -47,6 +47,7 @@ struct SalesAccountView: View {
 
                     }
                     
+                
                     Section (header: Text("Branch information")) {
                         TextField("Branch designation", text: $branchDesignation)
                         TextField("Cashier Location", text: $cashierLocation)
@@ -64,14 +65,7 @@ struct SalesAccountView: View {
                             .foregroundColor(.red)
                     }
                 }
-                .navigationTitle("Account")
-                .toolbar {
-                    Button{
-                        
-                    } label: {
-                        Text("Edit")
-                    }
-                }
+                
                 
             
 

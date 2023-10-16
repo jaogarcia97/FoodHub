@@ -39,19 +39,7 @@ struct TransactionHistoryView: View {
                 }
                 
             }//End of Scroll View
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
-                        Image(systemName: "person.circle.fill")
-                        Text("Magsino, Candy")
-                        //.font(.title)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 18))
-                    }
-                    
-                }
-                
-            }
+        
         }
         
         
