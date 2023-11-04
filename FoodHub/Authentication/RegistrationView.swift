@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var fullname = ""
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
     
     
     
@@ -60,10 +61,6 @@ struct RegistrationView: View {
             .padding(.vertical)
             
             //Spacer()
-            
-            
-            
-            
             
         }
         
