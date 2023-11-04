@@ -22,24 +22,22 @@ struct TransactionRowView: View {
             Spacer().frame(width: 10)
             VStack{
                 //Product Name
-                Text(transactionItem.productName)
+                Text("Ref No: \(transactionItem.referenceNumber)")
                     .lineLimit(nil) // Allow unlimited lines for multiline text
-                    .frame(maxWidth: 130, alignment: .leading) // Set a maximum width of 200 points
+                    .frame(maxWidth: 200, alignment: .leading) // Set a maximum width of 200 points
                 //Date of transaction
                 Text(formatDate(transactionItem.dateStamp))
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
-                    .frame(maxWidth: 130, alignment: .leading)
+                    .frame(maxWidth: 200, alignment: .leading)
             }
             
             Spacer()
-            
-            
-            Spacer()
-            
+                        
             //Product Price
             Text(String(format: "₱ %.2f", transactionItem.productPrice))
         }
+        
     }
     
     

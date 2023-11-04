@@ -19,11 +19,8 @@ struct SalesAccountView: View {
     var body: some View {
         
         VStack {
-            NavigationView{
-                
+            
                 Form {
-                    
-                    
                     HStack{
                         Text(User.MOCK_USER.initials)
                             .font(.title)
@@ -50,6 +47,7 @@ struct SalesAccountView: View {
 
                     }
                     
+                
                     Section (header: Text("Branch information")) {
                         TextField("Branch designation", text: $branchDesignation)
                         TextField("Cashier Location", text: $cashierLocation)
@@ -67,16 +65,9 @@ struct SalesAccountView: View {
                             .foregroundColor(.red)
                     }
                 }
-                .navigationTitle("Account")
-                .toolbar {
-                    Button{
-                        
-                    } label: {
-                        Text("Edit")
-                    }
-                }
                 
-            }
+                
+            
 
         }
     }
